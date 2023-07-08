@@ -142,3 +142,14 @@ h2{
 i{
     font-size: large;
 }
+
+@media (max-width: 700px) {
+    .container {
+      text-align: center;
+    }
+
+
+    .drop-container{
+        width: 280px;
+    }
+  }

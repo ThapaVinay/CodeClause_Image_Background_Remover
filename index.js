@@ -68,7 +68,7 @@ function App() {
                 <div className="line"></div>
             </div>
 
-            <h2 className="d-flex justify-content-center my-5">Image Background remover</h2>
+            <h2 className="container d-flex justify-content-center my-5">Image Background remover</h2>
 
             <div className="container ">
                 <p className="mb-5 ms-5 me-5">
@@ -80,7 +80,7 @@ function App() {
 
             <div style={{ fontFamily: "'Poppins', sans-serif" }}>
                 <form>
-                    <div className="d-flex justify-content-center" >
+                    <div className="container d-flex justify-content-center" >
                         <label htmlFor="file" className="drop-container">
                             <span className="drop-title">Drop files here</span>
                             or
