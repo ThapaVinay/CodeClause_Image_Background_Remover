@@ -2,9 +2,9 @@
 function App() {
 
     const [spinner, setSpinner] = React.useState(false);
+    const [imageUrl, setimageUrl] = React.useState("");
 
     var loading = "loading.gif";
-    var imageUrl;
 
     const handleUpload = (e) => {
 
@@ -34,7 +34,7 @@ function App() {
                 console.log(blob);
 
                 const url = URL.createObjectURL(blob);
-                imageUrl = url;
+                setimageUrl(url);
                 setSpinner(false);
                 console.log(imageUrl);
             })
@@ -49,7 +49,7 @@ function App() {
         var anchor = document.createElement('a');
         anchor.href = imageUrl;
 
-        anchor.download = "no-bg-png";
+        anchor.download = "no-bg";
         anchor.style.display = "none";
 
         document.body.appendChild(anchor);
@@ -61,7 +61,22 @@ function App() {
 
     return (
         <>
-            <h2 className="d-flex justify-content-center my-5" style={{ fontFamily: "'Poppins', sans-serif" }}>Image Background remover</h2>
+            <div class="social-icon ">
+                <a href="https://www.linkedin.com/in/vinay-singh-thapa" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/thapa._.vinay" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/ThapaVinay" target="_blank"><i class="fa fa-github"></i></a>
+                <div class="line"></div>
+            </div>
+
+            <h2 className="d-flex justify-content-center my-5">Image Background remover</h2>
+
+            <div className="container ">
+                <p className="mb-5 ms-5 me-5">
+                    This tool allows you to remove the background from your images, leaving you with a transparent or custom background. Simply upload your image, click the "Submit" button, and download the background-free version.
+                </p>
+            </div>
+
+
 
             <div style={{ fontFamily: "'Poppins', sans-serif" }}>
                 <form>
@@ -78,7 +93,7 @@ function App() {
                     <button className="btn submit-button" type="button" onClick={handleUpload}>Submit</button>
                 </div>
 
-                <span className="ps-5 grey-color pe-3"> Output</span>
+                <span className="grey-color pe-3"> Output</span>
                 <div className="d-inline-block">
                     <span className="grey-line"></span>
                 </div>
@@ -86,16 +101,22 @@ function App() {
                 {spinner ? <div className='text-center mt-5'>
                     <img src={loading} className="my-3" alt="loading" width="40px" />
                 </div>
-                    : imageUrl ? <div className="d-flex justify-content-center">
-                        < img id="image" src={imageUrl} alt="Welcome!" />
+                    : imageUrl ? <div className="d-flex justify-content-center" >
+                        < img id="image" src={imageUrl} alt="no_bg_image" />
                     </div> : <p className="d-flex justify-content-center mt-3" > Upload image to remove Background</p>
                 }
 
                 <div className="d-flex justify-content-center my-2">
-                    <button disabled = {imageUrl ? false: true} className="btn submit-button" onClick={downloadFile}> Download </button>
+                    <button disabled={imageUrl ? false : true} className="btn submit-button" onClick={downloadFile}> Download </button>
                 </div>
 
             </div>
+
+
+            <div class='footer '>
+                <span>Designed by @VST </span>
+            </div>
+
         </>
 
     );

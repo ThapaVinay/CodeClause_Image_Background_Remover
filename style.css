@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
+
+
 * {
     font-size: 14px;
     background-color: #0A192F;
@@ -50,13 +55,14 @@
     border: 2px solid #64ffda;
 }
 
-.image {
+#image{
     margin-top: 40px;
-    position: relative;
-    /* other elements will not affected by it*/
+    position: relative; /* other elements will not affected by it*/
     overflow: hidden;
     height: 300px;
+    border: 2px solid #8892B0;
     margin-bottom: -15px;
+    background-color: #fbfbfbd6;
 }
 
 
@@ -70,16 +76,69 @@
 
 .grey-color {
     color: #8892B0;
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: 150px;
 
 }
 
-img {
-    background-color: transparent;
-
-}
 
 p{
     font-family: 'sf mono', 'fira code', 'fira mono', 'roboto mono', monospace;
     color: #8892B0;
+}
+
+h2{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 2em;
+    padding-left: 15px;
+    font-weight: 700 !important;
+    color: #CCD6F6;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.footer{
+    text-align: right;
+    font-family: 'Source Code Pro', monospace;
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+    margin-right: 20px;
+    font-weight: 400;
+}
+
+.line{
+    width: 2.2px;
+    height: 80px;
+    background-color: #c1cbea;
+    margin-top: 30px;
+}
+
+.social-icon{
+    position: absolute;
+    position: fixed;
+    width: 5%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    align-items: center;
+    background-color: #0A192F;
+    padding: 10px 0px;
+    padding-bottom: 0px;
+    
+}
+
+.social-icon a{
+    color: #c1cbea;
+    margin: 10px 8px;
+    transition: transform 0.5s ease-out;
+}
+
+.social-icon a:hover{
+    transform: translate(0px,-10px);
+}
+
+i{
+    font-size: large;
 }
