@@ -61,11 +61,11 @@ function App() {
 
     return (
         <>
-            <div class="social-icon ">
-                <a href="https://www.linkedin.com/in/vinay-singh-thapa" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/thapa._.vinay" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://github.com/ThapaVinay" target="_blank"><i class="fa fa-github"></i></a>
-                <div class="line"></div>
+            <div className="social-icon ">
+                <a href="https://www.linkedin.com/in/vinay-singh-thapa" target="_blank"><i className="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/thapa._.vinay" target="_blank"><i className="fa fa-instagram"></i></a>
+                <a href="https://github.com/ThapaVinay" target="_blank"><i className="fa fa-github"></i></a>
+                <div className="line"></div>
             </div>
 
             <h2 className="d-flex justify-content-center my-5">Image Background remover</h2>
@@ -113,7 +113,7 @@ function App() {
             </div>
 
 
-            <div class='footer '>
+            <div className='footer '>
                 <span>Designed by @VST </span>
             </div>
 
